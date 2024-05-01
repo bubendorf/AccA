@@ -9,7 +9,7 @@ android {
     compileSdkVersion 33
     defaultConfig {
         applicationId "mattecarra.accapp"
-        minSdkVersion 31
+        minSdkVersion 29
         targetSdkVersion 33
         versionCode 39
         versionName "1.0.35"
