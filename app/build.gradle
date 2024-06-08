@@ -11,8 +11,9 @@ android {
         applicationId "mattecarra.accapp"
         minSdkVersion 29
         targetSdkVersion 33
-        versionCode 39
-        versionName "1.0.35"
+        versionCode 40
+        versionName "1.1.${versionCode}-" + getDate()
+        archivesBaseName = "AccA-${versionName}"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
@@ -25,7 +26,9 @@ android {
         debug {
             signingConfig null
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            applicationIdSuffix '.debug'
+            versionNameSuffix "-debug"
         }
         release {
             signingConfig null
@@ -49,6 +52,10 @@ android {
     }
 }
 
+static def getDate() {
+    return new Date().format('yyyyMMdd-HHmm')
+}
+
 dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -61,14 +68,14 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation "androidx.legacy:legacy-support-v4:1.0.0"
     implementation "androidx.vectordrawable:vectordrawable:1.1.0"
-    implementation "androidx.preference:preference-ktx:1.2.0"
+    implementation "androidx.preference:preference-ktx:1.2.1"
     implementation "androidx.cardview:cardview:1.0.0"
 
     implementation 'com.afollestad.material-dialogs:core:3.3.0'
     implementation 'com.afollestad.material-dialogs:input:3.3.0'
     implementation 'com.afollestad.material-dialogs:datetime:3.3.0'
 
-    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.google.code.gson:gson:2.11.0'
 
     implementation "com.github.topjohnwu.libsu:core:$versions.libsuVersion"
 
@@ -112,8 +119,10 @@ dependencies {
     implementation 'com.squareup.moshi:moshi-kotlin:1.15.0'
     ksp "com.squareup.moshi:moshi-kotlin-codegen:1.15.0"
 
-
     // Fragment KTX module
     implementation "androidx.fragment:fragment-ktx:1.6.0"
 
+    implementation "ch.acra:acra-http:5.11.3"
+    implementation "ch.acra:acra-toast:5.11.3"
+    implementation "ch.acra:acra-limiter:5.11.3"
 }

@@ -18,7 +18,7 @@ import java.net.URL
 import kotlin.math.abs
 
 object Acc {
-    const val bundledVersion = 202108310
+    const val bundledVersion = 202310160
     private val FILES_DIR = "/data/data/mattecarra.accapp/files"
 
     /*
@@ -28,6 +28,7 @@ object Acc {
     * */
     private fun getAccInterfaceForversion(v: Int): AccInterface {
         return when {
+            v >= 202310160 -> mattecarra.accapp.acc.v202310160.AccHandler(v)
             v >= 202107280 -> mattecarra.accapp.acc.v202107280.AccHandler(v)
             v >= 202007220 -> mattecarra.accapp.acc.v202107280.AccHandler(v)
             v >= 202007030 -> mattecarra.accapp.acc.v202007030.AccHandler(v)
