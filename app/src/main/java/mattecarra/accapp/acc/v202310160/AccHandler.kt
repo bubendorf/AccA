@@ -51,7 +51,7 @@ open class AccHandler(override val version: Int) : AccInterface {
     val MAX_CHARGING_VOLTAGE = """^\s*max_charging_voltage=(\d*)""".toRegex(MULTILINE)
     val MAX_CHARGING_CURRENT = """^\s*max_charging_current=(\d*)""".toRegex(MULTILINE)
 
-    val SWITCH = """^\s*charging_switch=((?:(?!#).)*)""".toRegex(MULTILINE)  // TODO: Ev. mit "
+    val SWITCH = """^\s*charging_switch=["]((?:(?!#).)*)["]""".toRegex(MULTILINE)  // TODO: Ev. mit "
     val AUTOMATIC_SWITCH_DISABLED = """^(.*) --\s*""".toRegex(MULTILINE)
     val PRIORITIZE_BATTERY_IDLE = """^\s*prioritize_batt_idle_mode=(true|false)""".toRegex(MULTILINE)
 

@@ -72,7 +72,7 @@
     <!-- Exit On Boot Card Strings -->
     <string name="title_exit_on_boot">Stop daemon after applying settings</string>
     <string name="description_exit_on_boot">This is used for writing to control files on boot.</string>
-    <string name="label_on_boot">apply_on_boot:</string>
+    <string name="label_on_boot">Apply on boot:</string>
 
     <!-- ACC installation -->
     <string name="installing_acc">Installing ACC</string>
@@ -481,5 +481,7 @@
     <string name="swd_show_temp">Show temperature</string>
     <string name="swd_show_volt">Show Voltage</string>
     <string name="swd_show_profile">Show profile</string>
+    <string name="applyonboot">Apply on boot</string>
+    <string name="applyonplug">Apply on plug</string>
 
 </resources>

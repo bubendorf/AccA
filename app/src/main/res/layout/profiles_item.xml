@@ -352,7 +352,7 @@
                             android:textAppearance="?attr/textAppearanceBodyMedium"
                             android:textColor="?android:attr/textColorSecondary"
                             android:textSize="@dimen/label_text"
-                            android:text="applyOnBoot" />
+                            android:text="@string/applyonboot" />
 
                     </LinearLayout>
 
@@ -394,7 +394,7 @@
                             android:textAppearance="?attr/textAppearanceBodyMedium"
                             android:textColor="?android:attr/textColorSecondary"
                             android:textSize="@dimen/label_text"
-                            android:text="applyOnPlug" />
+                            android:text="@string/applyonplug" />
 
                     </LinearLayout>
 

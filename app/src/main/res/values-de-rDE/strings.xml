@@ -60,6 +60,7 @@
     <!-- Exit On Boot Card Strings -->
     <string name="title_exit_on_boot">Daemon nach Anwendung der Einstellungen beenden</string>
     <string name="description_exit_on_boot">Dies wird zum Modifizieren von Kontrolldateien beim Hochfahren benutzt.</string>
+    <string name="label_on_boot">Beim Hochfahren:</string>
     <!-- ACC installation -->
     <string name="installing_acc">ACC wird installiert</string>
     <string name="reboot">Neustart</string>
@@ -330,4 +331,6 @@
     <string name="qwa_setting">Widget anpassen</string>
     <string name="qwa_toast_sleep">Schlafmodus</string>
     <string name="qwa_toast_start">Arbeitsmodus</string>
+    <string name="applyonboot">Beim Hochfahren</string>
+    <string name="applyonplug">Beim Einstecken</string>
 </resources>
